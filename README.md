@@ -206,4 +206,4 @@ end
 
 Now, our tweet will be associated with the user when the form is submitted. Awesome! 
 
-<a href='https://learn.co/lessons/sinatra-fwitter-4-associations' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-fwitter-4-associations' title='Sinatra Fwitter 4 -  Associations'>Sinatra Fwitter 4 -  Associations</a> on Learn.co and start learning to code for free.</p>
