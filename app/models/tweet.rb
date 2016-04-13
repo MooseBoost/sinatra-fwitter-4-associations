@@ -20,4 +20,6 @@ class Tweet < ActiveRecord::Base
   # def self.all
   #   ALL
   # end
+  
+  belongs_to :user
 end

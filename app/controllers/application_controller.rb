@@ -1,5 +1,6 @@
 require './config/environment'
 require './app/models/tweet'
+require './app/models/user'
 require 'pry'
 
 class ApplicationController < Sinatra::Base
@@ -19,8 +20,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/tweet' do
-    tweet = Tweet.new({:username => params[:username], :status => params[:status]}) 
-    tweet.save 
+    user = User.find_by(:username => params[:username])
+    if user.nil?
+      user = User.create(username: params[:username])
+    end
+    tweet = Tweet.new({:user => user, :status => params[:status]}) 
+    tweet.save
     redirect '/'
   end
 

@@ -10,7 +10,8 @@
 
       <h2>Tweets!</h2>
       <% @tweets.each do |tweet| %>
-        <p><strong><%= tweet.username %>:</strong> <%= tweet.status %></p>
+        <% binding.pry %>
+        <p><strong><%= tweet.user.username %>:</strong> <%= tweet.status %></p>
       <% end %>
 
     </div>
